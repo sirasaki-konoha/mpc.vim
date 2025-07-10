@@ -7,4 +7,6 @@
 
 
 
+command! MpcCurrentMusic call mpc#GetPlayingMusic()
+
 
