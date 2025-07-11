@@ -63,6 +63,19 @@ function! mpc#PlayMusic(position)
 
 endfunction
 
+
+function! s:setup_mpc_highlight()
+  highlight MpcSongName ctermfg=lightcyan guifg=lightcyan
+  call matchadd('MpcSongName', '.*')
+
+  highlight MpcCurrentSong ctermfg=Green guifg=Green
+  call matchadd('MpcCurrentSong', '\V<~')
+
+  highlight MpcMusicNumber ctermfg=lightgray guifg=lightgray
+  call matchadd('MpcMusicNumber', '^\s*\d\+')
+
+endfunction
+
 function! mpc#DisplayPlayList(is_update)
 
     if !mpc#Check()
@@ -86,6 +99,7 @@ function! mpc#DisplayPlayList(is_update)
     	setlocal nowrap sidescroll=1 sidescrolloff=5
     	file *mpc-playlist*
     	call mpc#DefineKeyBind()
+	call s:setup_mpc_highlight()
     endif
     
     return l:lines
