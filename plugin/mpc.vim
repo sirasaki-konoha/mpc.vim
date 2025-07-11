@@ -5,9 +5,21 @@
 " License:     MIT
 " URL:         https://github.com/rock-db/mpc.vim
 
+
+let s:playing_music = trim(system('mpc --format "[%album% ][%artist% - %title% ][%file%]" current'))
+
+call mpc#CheckOnStartUp()
+
 command! MpcCurrentMusic call mpc#GetPlayingMusic()
 command! -nargs=1  MpcPlayMusic call mpc#PlayMusic(<f-args>)
-command! MpcPlayList call mpc#DisplayPlayList()
+command! MpcPlaylist call mpc#DisplayPlayList(1)
+command! MpcPlaylist call mpc#DisplayPlayList(1)
 
+
+command! MpcVolumeUp call mpc#VolumeUp()
+command! MpcVolumeDown call mpc#VolumeDown()
+
+command! MpcToggleRepeat call mpc#ToggleRepeat()
+command! MpcToggleShuffle call mpc#ToggleShuffle()
 
 
