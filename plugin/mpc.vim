@@ -5,8 +5,9 @@
 " License:     MIT
 " URL:         https://github.com/rock-db/mpc.vim
 
-
-
 command! MpcCurrentMusic call mpc#GetPlayingMusic()
+command! -nargs=1  MpcPlayMusic call mpc#PlayMusic(<f-args>)
+command! MpcPlayList call mpc#DisplayPlayList()
+
 
 
