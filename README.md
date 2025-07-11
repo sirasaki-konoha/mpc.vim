@@ -51,6 +51,7 @@ Inside this buffer, the following key bindings are available:
 | Command             | Description                            |
 | ------------------- | -------------------------------------- |
 | `:MpcCurrentMusic`  | Show currently playing song            |
+| `:MpcStop`          | Stop currently playing song            |
 | `:MpcPlayNext`      | Play the next song in the playlist     |
 | `:MpcPlayPrev`      | Play the previous song in the playlist |
 | `:MpcVolumeUp`      | Increase volume by 5                   |

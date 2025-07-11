@@ -239,6 +239,19 @@ function! mpc#PlayPrevMusic()
 	call mpc#DisplayColorMessage("Now Playing: " . splited[0])
 endfunction
 
+function! mpc#StopMusic()
+	if !mpc#Check()
+		return
+	endif
+
+	let l:output = system('mpc stop')
+	if v:shell_error != 0
+		echohl ErrorMsg | echom "Failed to stop music: " . l:output | echohl None
+		return
+	endif
+
+	call mpc#DisplayColorMessage("Music stop")
+endfunction
 
 function! mpc#PlaySelectedMusic()
 	if !mpc#Check()

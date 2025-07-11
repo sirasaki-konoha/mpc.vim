@@ -14,6 +14,7 @@ call mpc#CheckOnStartUp()
 
 command! MpcCurrentMusic call mpc#GetPlayingMusic()
 command! MpcPlaylist call mpc#DisplayPlayList(1)
+command! MpcStop call mpc#StopMusic()
 
 command! MpcPlayNext call mpc#PlayNextMusic()
 command! MpcPlayPrev call mpc#PlayPrevMusic()
