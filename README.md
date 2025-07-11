@@ -9,6 +9,7 @@
 - Adjust volume
 - Toggle repeat and shuffle
 - View currently playing song
+- Play next or previous song
 
 ## Requirements
 
@@ -47,13 +48,15 @@ Inside this buffer, the following key bindings are available:
 
 ### Additional Commands
 
-| Command             | Description                  |
-| ------------------- | ---------------------------- |
-| `:MpcCurrentMusic`  | Show currently playing song  |
-| `:MpcVolumeUp`      | Increase volume by 5         |
-| `:MpcVolumeDown`    | Decrease volume by 5         |
-| `:MpcToggleRepeat`  | Toggle repeat mode           |
-| `:MpcToggleShuffle` | Toggle shuffle (random) mode |
+| Command             | Description                            |
+| ------------------- | -------------------------------------- |
+| `:MpcCurrentMusic`  | Show currently playing song            |
+| `:MpcPlayNext`      | Play the next song in the playlist     |
+| `:MpcPlayPrev`      | Play the previous song in the playlist |
+| `:MpcVolumeUp`      | Increase volume by 5                   |
+| `:MpcVolumeDown`    | Decrease volume by 5                   |
+| `:MpcToggleRepeat`  | Toggle repeat mode                     |
+| `:MpcToggleShuffle` | Toggle shuffle (random) mode           |
 
 ## License
 
@@ -62,3 +65,4 @@ MIT License
 ## Author
 
 rock-db
+

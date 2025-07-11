@@ -192,6 +192,39 @@ function! mpc#DefineKeyBind()
 
 endfunction
 
+function! mpc#PlayNextMusic()
+	if !mpc#Check()
+		return
+	endif
+
+	let l:result = system('mpc --format "[%album% ][%artist% - %title% ][%file%]" next')
+	let l:splited = split(l:result, "\n")
+
+	if v:shell_error != 0
+		echohl ErrorMsg | echom "Failed to play next music: " . l:result | echohl None
+		return
+	endif
+
+	call mpc#DisplayColorMessage("Now Playing: " . splited[0])
+endfunction
+
+
+function! mpc#PlayPrevMusic()
+	if !mpc#Check()
+		return
+	endif
+
+	let l:result = system('mpc --format "[%album% ][%artist% - %title% ][%file%]" prev')
+	let l:splited = split(l:result, "\n")
+
+	if v:shell_error != 0
+		echohl ErrorMsg | echom "Failed to play previous music: " . l:result | echohl None
+		return
+	endif
+
+	call mpc#DisplayColorMessage("Now Playing: " . splited[0])
+endfunction
+
 
 function! mpc#PlaySelectedMusic()
 	if !mpc#Check()

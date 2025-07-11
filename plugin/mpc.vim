@@ -10,10 +10,13 @@ let s:playing_music = trim(system('mpc --format "[%album% ][%artist% - %title% ]
 
 call mpc#CheckOnStartUp()
 
+" command! -nargs=1  MpcPlayMusic call mpc#PlayMusic(<f-args>)
+
 command! MpcCurrentMusic call mpc#GetPlayingMusic()
-command! -nargs=1  MpcPlayMusic call mpc#PlayMusic(<f-args>)
 command! MpcPlaylist call mpc#DisplayPlayList(1)
 
+command! MpcPlayNext call mpc#PlayNextMusic()
+command! MpcPlayPrev call mpc#PlayPrevMusic()
 
 command! MpcVolumeUp call mpc#VolumeUp()
 command! MpcVolumeDown call mpc#VolumeDown()
