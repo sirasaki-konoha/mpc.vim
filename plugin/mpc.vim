@@ -13,7 +13,6 @@ call mpc#CheckOnStartUp()
 command! MpcCurrentMusic call mpc#GetPlayingMusic()
 command! -nargs=1  MpcPlayMusic call mpc#PlayMusic(<f-args>)
 command! MpcPlaylist call mpc#DisplayPlayList(1)
-command! MpcPlaylist call mpc#DisplayPlayList(1)
 
 
 command! MpcVolumeUp call mpc#VolumeUp()
