@@ -423,8 +423,8 @@ function! s:change_volume(change)
     let l:result = s:execute_command('volume ' . a:change)
 
     if l:result.success && len(l:result.lines) > 2
-        let l:volume_info = split(l:result.lines[2], "    ")[0]
-        call s:display_info("Volume: " . l:volume_info)
+        let l:volume_info = split(l:result.lines[2], "   ")[0]
+        call s:display_info(l:volume_info)
     else
         call s:display_error("Failed to change volume")
     endif
