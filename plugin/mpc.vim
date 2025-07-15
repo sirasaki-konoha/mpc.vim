@@ -5,9 +5,6 @@
 " License:     MIT
 " URL:         https://github.com/rock-db/mpc.vim
 
-
-let s:playing_music = trim(system('mpc --format "[%album% ][%artist% - %title% ][%file%]" current'))
-
 call mpc#CheckOnStartUp()
 
 " command! -nargs=1  MpcPlayMusic call mpc#PlayMusic(<f-args>)
