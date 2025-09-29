@@ -11,8 +11,8 @@
 
 let s:config = {
     \ 'format': {
-    \     'default': '[%album% ][%artist% - %title% ][%file%]',
-    \     'current': '[%album%] [%artist% - %title%] [%file%]',
+    \     'default': '[[%album% ][%artist% - ]%title%]|[%file%]',
+    \     'current': '[[%album% ][%artist% - ]%title%]|[%file%]',
     \     'file_only': '%file%'
     \ },
     \ 'volume_step': 5,
