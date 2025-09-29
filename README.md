@@ -95,4 +95,4 @@ MIT License
 
 ## Author
 
-rock-db
+sirasaki-konoha
